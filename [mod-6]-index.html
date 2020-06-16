@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jiggle Into JavaScript</title>
+    <script src="[mod-6]-javascript.js"></script>
+</head>
+<body>
+    <style>
+        #box {
+            transition: all 1s ease;
+        }
+        .normal-box {
+            height:150px;
+            width:150px;
+            background-color:orange;
+            margin:40px;
+            border-left: 0px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 0px solid transparent;
+        }
+        .grow-box {
+            height:250px;
+            width:150px;
+            background-color:orange;
+            margin:40px;
+            border-left: 0px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 0px solid transparent;
+        }
+        .blue-box {
+            height:150px;
+            width:150px;
+            background-color:blue;
+            margin:40px;
+            border-left: 0px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 0px solid transparent;
+        }
+        .fade-box {
+            height:150px;
+            width:150px;
+            background-color:orange;
+            margin:40px;
+            opacity:50%;
+            border-left: 0px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 0px solid transparent;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            margin: 40px;
+            border-left: 75px solid transparent;
+	        border-right: 75px solid transparent;
+            border-top: 150px solid orange;
+        }
+        .circle {
+            width: 150px;
+            height: 150px;
+            margin: 40px;
+            background-color: orange;
+            border-radius: 50%;
+            border-left: 0px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 0px solid transparent;
+        }
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+            }
+        .shake-box {
+            height:150px;
+            width:150px;
+            background-color:orange;
+            margin:40px;
+            border-left: 0px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 0px solid transparent;
+            animation-name: shake;
+            animation-duration: 1s;
+        }
+    </style>
+    <p>Press the buttons to change the box!</p>
+
+    <div id="box" class="normal-box"></div>
+
+    <button id="button1" onclick="growBox()">Grow</button>
+    <button id="button2" onclick="blueBox()">Blue</button>
+    <button id="button3" onclick="fadeBox()">Fade</button>
+    <button id="button4" onclick="resetBox()">Reset</button>
+    <div>
+    <button id="button5" onclick="triangle()">Tesselate</button>
+    <button id="button6" onclick="circle()">Circlulate</button>
+    <button id="button7" onclick="shake()">Shake</button>
+    </div>
+
+</body>
+</html>
